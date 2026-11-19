@@ -300,7 +300,6 @@ footer a[aria-current="page"]{color:var(--maroon);font-weight:800}
   .social-actions .btn{text-align:center}
 }
 
-/* Sandra Andeka team card details */
 .about-team-grid{align-items:stretch}
 .about-team-card{height:100%}
 .sandra-education{display:flex;align-items:flex-start;gap:8px;margin:12px 0;color:var(--gray);font-size:12px;line-height:1.55;text-align:left}
@@ -425,10 +424,6 @@ html[data-theme="dark"] .ok{background:#30262c;color:#f0c2d0}
 @media(min-width:769px) and (max-width:1024px){
   .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .about-team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-}
-
-@media(min-width:1025px){
-  .about-team-card:nth-child(4){grid-column:2}
 }
 
 @media(max-width:480px){
