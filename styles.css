@@ -38,6 +38,25 @@ nav a:not(.btn):hover{color:var(--maroon)}.nav-cta{padding:11px 20px;font-size:1
 .phn{position:absolute;left:0;bottom:0;width:30%;max-width:130px;height:250px;border:6px solid var(--dark);border-radius:20px;background-color:#fff}
 .dsk img{object-position:center top}
 .phn img{object-position:50% center}
+.dsk{overflow:hidden;animation:device-float 6s ease-in-out infinite}
+.phn{z-index:1;animation:device-float 6s ease-in-out -3s infinite}
+.browser-bar{position:absolute;inset:0 0 auto;z-index:2;height:25px;display:flex;align-items:center;gap:5px;padding:0 9px;background:#fff}
+.browser-bar span{width:7px;height:7px;border-radius:50%;background:#dfc5cd}
+.browser-bar span:first-child{background:#a05a70}
+.browser-bar i{margin:auto;font-size:7px;font-style:normal;color:#8b7b80}
+.project-reel{position:absolute;inset:25px 0 0;overflow:hidden;background:#fff}
+.project-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;opacity:0;animation:project-reel 16s linear infinite}
+.project-slide:nth-child(2),.project-caption:nth-of-type(2){animation-delay:-4s}
+.project-slide:nth-child(3),.project-caption:nth-of-type(3){animation-delay:-8s}
+.project-slide:nth-child(4),.project-caption:nth-of-type(4){animation-delay:-12s}
+.project-caption{position:absolute;left:12px;bottom:10px;z-index:1;padding:6px 9px;border:1px solid rgba(255,255,255,.32);border-radius:20px;background:rgba(42,26,32,.78);color:#fff;font-size:8px;font-weight:700;letter-spacing:.06em;opacity:0;animation:project-reel 16s linear infinite}
+@keyframes project-reel{0%,21%{opacity:1;transform:scale(1.035)}25%,97%{opacity:0;transform:scale(1)}100%{opacity:1;transform:scale(1.035)}}
+@keyframes device-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@media(prefers-reduced-motion:reduce){
+  .dsk,.phn{animation:none}
+  .project-slide,.project-caption{animation:none}
+  .project-slide:first-child,.project-caption:first-of-type{opacity:1}
+}
 
 /* stats */
 .stats{background:var(--maroon);color:#fff;padding:34px 0}
