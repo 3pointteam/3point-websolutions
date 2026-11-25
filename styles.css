@@ -50,6 +50,8 @@ nav a:not(.btn):hover{color:var(--maroon)}.nav-cta{padding:11px 20px;font-size:1
 .project-slide:nth-child(3),.project-caption:nth-of-type(3){animation-delay:-8s}
 .project-slide:nth-child(4),.project-caption:nth-of-type(4){animation-delay:-12s}
 .project-caption{position:absolute;left:12px;bottom:10px;z-index:1;padding:6px 9px;border:1px solid rgba(255,255,255,.32);border-radius:20px;background:rgba(42,26,32,.78);color:#fff;font-size:8px;font-weight:700;letter-spacing:.06em;opacity:0;animation:project-reel 16s linear infinite}
+.phone-reel{position:absolute;inset:0;overflow:hidden;background:#fff}
+.phn .project-slide{object-position:50% center}
 @keyframes project-reel{0%,21%{opacity:1;transform:scale(1.035)}25%,97%{opacity:0;transform:scale(1)}100%{opacity:1;transform:scale(1.035)}}
 @keyframes device-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
 @media(prefers-reduced-motion:reduce){
